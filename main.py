@@ -1,11 +1,24 @@
-import random 
-print("Hint:The numbers are from 0 to 10 only")
-user_choice = input("Enter your Guess \n")
-user_choice = int(user_choice)
-comp_choice = random.randrange(1,10)
-if user_choice == comp_choice:
-    print(f"You guessed it right, The number was {comp_choice}")
-elif comp_choice == comp_choice:
-    print(f"You Lost, The number was {comp_choice}")
-else:
-    print("Error*_*404/Draw of both user and computer")
+import random
+def gameFunction():
+    while True:
+        rightAns = random.randrange(1,10)
+
+        userGuess = int(input('Enter your guess \n'))
+
+        if userGuess == rightAns:
+            print(f'You Won The number was {rightAns} which matched with yours number {userGuess}.')
+            False
+            quit()
+            
+        else:
+            True
+
+try:
+    gameFunction()
+
+except ValueError as error:
+    print(error)
+    print("Now, Onwards please try to enter in integer only not in string or floats values.")
+
+finally:
+    gameFunction()
